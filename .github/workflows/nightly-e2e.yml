@@ -107,8 +107,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          retention-days: 3
-        with:
           name: ui-e2e-report
           path: frontend/playwright-report/
           retention-days: 3
@@ -116,8 +114,6 @@ jobs:
       - name: Upload screenshots
         if: failure()
         uses: actions/upload-artifact@v4
-        with:
-          retention-days: 3
         with:
           name: ui-e2e-screenshots
           path: frontend/test-results/
