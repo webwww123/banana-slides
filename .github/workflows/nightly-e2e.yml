@@ -111,7 +111,7 @@ jobs:
         with:
           name: ui-e2e-report
           path: frontend/playwright-report/
-          retention-days: 7
+          retention-days: 3
       
       - name: Upload screenshots
         if: failure()
@@ -121,7 +121,7 @@ jobs:
         with:
           name: ui-e2e-screenshots
           path: frontend/test-results/
-          retention-days: 7
+          retention-days: 3
       
       - name: Cleanup
         if: always()
